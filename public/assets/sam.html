@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcade Game Frame</title>
+<style>
+    body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.arcade {
+    position: relative;
+    width: 300px; /* Adjust size */
+}
+
+.arcade img {
+    width: 100%;
+    display: block;
+}
+
+.arcade-video {
+    position: absolute;
+    top: 105px;  /* Top screen position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px; /* Match screen size */
+    height: 105px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.arcade-button {
+    position: absolute;
+    bottom: 20px; /* Adjust to fit inside bottom rectangle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 113px;   /* Width to match bottom screen */
+    height: 100px;   /* Height to fill bottom screen */
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.arcade-button:hover {
+    background: darkred;
+}
+
+</style>
+</head>
+<body>
+
+<div class="arcade">
+    <img src="./WhatsApp Image 2025-08-01 at 12.40.44_7e1653b6.jpg" alt="Arcade Machine">
+
+    <!-- Video inside top screen -->
+    <video class="arcade-video" autoplay muted loop>
+        <source src="./WhatsApp Video 2025-07-31 at 19.30.37_20dac975.mp4" type="video/mp4">
+    </video>
+
+    <!-- Button below the screen -->
+    <button class="arcade-button">Play Game</button>
+</div>
+
+</body>
+</html>
